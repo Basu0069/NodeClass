@@ -1,0 +1,1 @@
+this is fs promises file using then and catch methodhello world 

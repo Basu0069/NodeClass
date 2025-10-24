@@ -1,0 +1,22 @@
+Asynchronous(Non-Blocking) and synchrononus(Blocking);
+
+synchrononus
+fs.writefileSync(path,data,option)
+fs.readFileSync(path,options);
+fs.appendFileSync(path,data,option);
+fs.renameSync(oldpath,newpath);
+fs.unlinkSync(path);
+
+
+
+Asynchronous
+fs.writeFile()
+fs.readFile()
+// all same like tghat just sync part is not there okay 
+
+
+Asynchronous Methods --- 1) CallbAck
+2)Promises  ---a)then /catch 
+b) asyncpawait 
+
+

@@ -1,0 +1,2 @@
+this is fs promises async/await method
+ this is my updated file now
