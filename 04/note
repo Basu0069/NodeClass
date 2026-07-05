@@ -1,0 +1,23 @@
+util module -- function 
+
+debuglog()
+format(format, [..]
+inherits()
+inspects()
+
+
+Stream MOdule ----Types 
+readble 
+writeable 
+Duplex 
+transform 
+
+
+
+
+
+Https modules  --- steps 
+1.Import the http module 
+2. create server using http.createserver(requries, response);
+3.Handling requests == request.url --- res.end();
+4. start the server --- listen() --- port number 

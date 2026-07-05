@@ -1,0 +1,6 @@
+
+
+
+10. fix port number issues :
+ 1. first tou can check the port numnber --- echo  $env:PORT 
+ 2.You cam alsp delete the port number -- rec

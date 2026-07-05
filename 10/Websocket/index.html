@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>WebSocket Browser Client</title>
+</head>
+
+<body>
+    <h2>WebSocket Browser Client</h2>
+
+    <p id="status">Connecting...</p>
+    <p><strong>Messages:</strong></p>
+    <div id="messages" </div>
+
+        <script>
+            // Connect to your WebSocket server
+            const socket = new WebSocket("ws://localhost:3000");
+
+            const status = document.getElementById("status");
+            const messages = document.getElementById("messages");
+
+            // When connected
+            socket.onopen = () => {
+                status.textContent = "Connected to server";
+                socket.send("Hello from Browser Client");
+            };
+
+            // When a message is received
+            socket.onmessage = (event) => {
+                const msg = document.createElement("p");
+                msg.textContent = "Server: " + event.data;
+                messages.appendChild(msg);
+            };
+
+            // When connection closes
+            socket.onclose = () => {
+                status.textContent = "Connection closed";
+            };
+
+            // When error occurs
+            socket.onerror = (err) => {
+                status.textContent = "Error connecting to server";
+                console.error("WebSocket error:", err);
+            };
+        </script>
+</body>
+
+</html>

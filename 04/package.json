@@ -1,0 +1,14 @@
+{
+  "name": "04",
+  "version": "1.0.0",
+  "description": "",
+  "main": "01task.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "basu",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

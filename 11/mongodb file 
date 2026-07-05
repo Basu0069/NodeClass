@@ -1,0 +1,53 @@
+it automatically create student data dase insid 
+
+// ye sb terminal mie 
+// ye h mongo shell okkay 
+
+
+test> use students
+switched to db students
+students> show collections
+
+students> db.createCollection("stud")
+{ ok: 1 }
+students> db.stud.insertOne({"sname": "aman", age: 34, domain:"networking"})
+{
+  acknowledged: true,
+  insertedId: ObjectId('693a8901f965ddd8b78de666')
+}
+students> db.stud.findOne({age:34})
+{
+  _id: ObjectId('693a8901f965ddd8b78de666'),
+  sname: 'aman',
+  age: 34,
+  domain: 'networking'
+}
+students> db.stud.find({age: {$gt:34}})
+
+students> db.stud.updateOne({"sname: "aman"},{$set:{age:36}})
+Uncaught:
+SyntaxError: Unexpected token (1:28)
+
+> 1 | db.stud.updateOne({"sname: "aman"},{$set:{age:36}})
+    |                             ^
+  2 |
+
+students> db.stud.updateOne(
+...   { sname: "aman" },
+...   { $set: { age: 36 } }
+... )
+... 
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+students> db.stud.drop()
+true
+students> db.dropDatabase()
+{ ok: 1, dropp
+
+// view all documents 
+
